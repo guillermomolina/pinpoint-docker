@@ -143,7 +143,7 @@ services:
       - "${COLLECTOR_RECEIVER_SPAN_UDP_PORT:-9996}:9996/udp"
     networks:
       pinpoint:
-        ipv4_address: ${COLLECTOR_FIXED_IP}
+    #     ipv4_address: ${COLLECTOR_FIXED_IP}
     environment:
       - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES}
       - PINPOINT_ZOOKEEPER_ADDRESS=${PINPOINT_ZOOKEEPER_ADDRESS}
@@ -352,7 +352,7 @@ volumes:
 
 networks:
   pinpoint:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: ${PINPOINT_NETWORK_SUBNET}
+    # driver: bridge
+    # ipam:
+    #   config:
+    #     - subnet: ${PINPOINT_NETWORK_SUBNET}
